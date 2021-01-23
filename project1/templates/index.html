@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>首页</title>
-</head>
-<body>
-    <h1>欢迎来到 <span style="color:red">首页</span> </h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+
+{% block main %}
+<div class="container">
+	<div class="list-group">
+		{% for a in books %}
+		{% if a == books|first %}
+			<a href="#" class="list-group-item active">
+				{{ a["name"] }}
+			</a>
+		{% else %}
+			<a href="#" class="list-group-item">
+				{{ a["name"] }}
+			</a>
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}
+
