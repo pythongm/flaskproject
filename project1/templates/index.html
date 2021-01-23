@@ -6,11 +6,11 @@
 	<div class="list-group">
 		{% for a in books %}
 		{% if a == books|first %}
-			<a href="#" class="list-group-item active">
+			<a href="/{{a['id']}}" class="list-group-item active">
 				{{ a["name"] }}
 			</a>
 		{% else %}
-			<a href="#" class="list-group-item">
+			<a href="/{{a['id']}}" class="list-group-item">
 				{{ a["name"] }}
 			</a>
 		{% endif %}
