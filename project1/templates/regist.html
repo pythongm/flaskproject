@@ -4,7 +4,7 @@
 {% endblock %}
 {% block main %}
 <div class="container">
-    <form class="form-horizontal" method="post" action="{{ url_for('regist') }}">
+    <form class="form-horizontal" method="post" action="{{ url_for('user.regist') }}">
       <div class="form-group">
         {% for error in get_flashed_messages() %}
         <p class="text-danger">{{error}}</p>
